@@ -24,11 +24,6 @@ return {
       local cmp = require("cmp")
       local defaults = require("cmp.config.default")()
       local auto_select = true
-      require("cmp").setup({
-        sources = {
-          { name = "emoji" },
-        },
-      })
       return {
         auto_brackets = {}, -- configure any filetype to auto add brackets
         completion = {
@@ -55,6 +50,7 @@ return {
         sources = cmp.config.sources({
           { name = "lazydev" },
           { name = "nvim_lsp" },
+          { name = "emoji" },
           { name = "path" },
         }, {
           { name = "buffer" },
