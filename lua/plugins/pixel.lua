@@ -5,7 +5,8 @@ return {
   enabled = true,
   config = function()
     vim.api.nvim_create_user_command("HelloWorld", function()
-      print("Hello from LazyVim plugin!")
+      require("pxt").hello()
+      print("try hard !!!")
     end, {})
   end,
 }
